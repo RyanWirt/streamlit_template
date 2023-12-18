@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-import joblib
+import pickle
 
 # Generate some sample data (replace with your dataset)
 np.random.seed(0)
@@ -14,4 +14,4 @@ model = LinearRegression()
 model.fit(X, y)
 
 # Save the trained model to a file
-joblib.dump(model, "../models/regression_model.pkl")
+pickle.dump(model, open("../models/regression_model.pkl", "wb"))

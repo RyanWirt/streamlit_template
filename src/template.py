@@ -1,14 +1,14 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import joblib
+import pickle
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
 
 #Replace with new models.
 # Load the pre-trained regression models
-linear_model = joblib.load("../models/regression_model.pkl")
-rf_model = joblib.load("../models/random_forest_model.pkl")
+linear_model = pickle.load(open("../models/regression_model.pkl", "rb"))
+rf_model = pickle.load(open("../models/random_forest_model.pkl", "rb"))
 
 # Page title
 st.title("Regression Analysis App")

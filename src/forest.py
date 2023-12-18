@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
-import joblib
+import pickle
 
 # Generate random data
 np.random.seed(0)
@@ -33,4 +33,4 @@ print("Train R-squared:", train_score)
 print("Test R-squared:", test_score)
 
 # Save the trained model to a file
-joblib.dump(rf_model, "../models/random_forest_model.pkl")
+pickle.dump(rf_model, open("../models/random_forest_model.pkl", "wb"))
