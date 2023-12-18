@@ -1,0 +1,17 @@
+name: streamlit
+
+dependencies:
+    - python>=3.9.0
+    - jupyter
+    - scikit-learn
+    - scipy
+    - pandas
+    - matplotlib
+    - seaborn
+    - pip>=19.0
+    
+    - pip: 
+        - opencv-python
+        - streamlit
+  
+
